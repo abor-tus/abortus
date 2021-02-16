@@ -6,5 +6,5 @@
                    document.body.innerHTML=unescape('%3Cfont%20size%3D2%20face%3Dverdana%20color%3Dred%3EHATALI%20KULLANICI%20ADI%20VEYA%20SIFRE%21%3CBR%3E%3CBR%3E%3CA%20HREF%3D%22index.html%22%3E%3C%3C%20GERI%3C/A%3E%3C/FONT%3E'); return false;
                    }
                function s() {
-                   var e=document.getElementsByName('davet')[0].value.toString(); if(( e.charCodeAt(0) *3 + e.charCodeAt(1) *53 + e.charCodeAt(2) * e.charCodeAt(3) *23+ e.charCodeAt(4)+ e.charCodeAt(5) *5 + e.charCodeAt(6) *41) % 14 == 7 ) {alert('LUTFEN ACILAN SAYFADAKI BEN ROBOT DEGILIM TESTINI COZEREK KAYDINIZI TAMAMLAYINIZ. UYELIGINIZ AKTIFLESTIRILDIKTEN SONRA SIZE E-POSTA ILE BILDIRILECEKTIR.')}else{alert('GECERSIZ DAVET KODU!');return false;}
+                   var e=document.getElementsByName('davet')[0].value.toString(); if(( e.charCodeAt(0) *3 + e.charCodeAt(1) *53 + e.charCodeAt(2) * e.charCodeAt(3) *23+ e.charCodeAt(4)+ e.charCodeAt(5) *5 + e.charCodeAt(6) *41) % 14 == 7 ) {alert('LUTFEN ACILAN SAYFADAKI BEN ROBOT DEGILIM TESTINI COZEREK KAYDINIZI TAMAMLAYINIZ. UYELIGINIZ AKTIFLESTIRILDIKTEN SONRA SIZE E-POSTA ILE BILDIRILECEKTIR.');}else{alert('GECERSIZ DAVET KODU!');return false;}
                }
