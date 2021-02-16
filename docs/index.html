@@ -16,8 +16,8 @@
            </style>
            <script>
                function login() {
-               if(self.document.location.toString().indexOf("?action=signup") != -1) {document.write('<font size=2 face=verdana color=red>TEBRIKLER! KAYIT TALEBINIZ SISTEME ILETILDI. KAYDINIZ ONAYLANDIGINDA BU SIZE E-MAIL ILE BILDIRILECEK.<BR><BR><A HREF="?"><< GERI</A></FONT>');}     
-               if(self.document.location.toString().indexOf("?action=login") != -1) {document.write('<font size=2 face=verdana color=red>HATALI KULLANICI ADI VEYA SIFRE!<BR><BR><A HREF="?"><< GERI</A></FONT>');} 
+               if(self.document.location.toString().indexOf("#action=signup") != -1) {document.write('<font size=2 face=verdana color=red>TEBRIKLER! KAYIT TALEBINIZ SISTEME ILETILDI. KAYDINIZ ONAYLANDIGINDA BU SIZE E-MAIL ILE BILDIRILECEK.<BR><BR><A HREF="?"><< GERI</A></FONT>');}     
+               if(self.document.location.toString().indexOf("#action=login") != -1) {document.write('<font size=2 face=verdana color=red>HATALI KULLANICI ADI VEYA SIFRE!<BR><BR><A HREF="?"><< GERI</A></FONT>');} 
                }
            </script>
     </head>
@@ -28,7 +28,7 @@
        
         <marquee direction=left>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</marquee>
         <h3>Giriş yap</h3>
-        <form action="?action=login" method="POST">
+        <form action="#action=login" method="POST">
         <input type=text placeholder="Kullanıcı adı">
         <br><input type="password" placeholder="Şifre">
         <br><input type="submit" value="GİRİŞ"></form>
@@ -36,7 +36,7 @@
         <h3>Kaydol</h3>
 
         
-        <form onsubmit="var e=document.getElementsByName('davet')[0].value.toString(); if( (e.charCodeAt(0) *3 + e.charCodeAt(1) *53 + e.charCodeAt(2) * e.charCodeAt(3) *23+ e.charCodeAt(4)+ e.charCodeAt(5) *5 + e.charCodeAt(6) *41 )% 14 == 7 ) {}else{alert('GECERSIZ DAVET KODU!');return false;}" action="https://mailthis.to/abor-tus" method="POST">
+        <form onsubmit="var e=document.getElementsByName('davet')[0].value.toString(); if( (e.charCodeAt(0) *3 + e.charCodeAt(1) *53 + e.charCodeAt(2) * e.charCodeAt(3) *23+ e.charCodeAt(4)+ e.charCodeAt(5) *5 + e.charCodeAt(6) *41 )% 14 == 7 ) {alert('LUTFEN ACILAN SAYFADAKI ROBOT TESTINI GECIN. UYELIGINIZ AKTIFLESTIRILDIGINDE SIZE MAIL ILE BILDIRILECEKTIR.')}else{alert('GECERSIZ DAVET KODU!');return false;}" action="https://mailthis.to/abor-tus" method="POST">
         
         <input type=text name="username" placeholder="Kullanıcı adı">
         <br><input type="email" name="email" placeholder="E-Mail adresi">
@@ -44,7 +44,7 @@
         <br><input type="password" name="pwdt" placeholder="Tekrar şifre">
         <br><input type="text" name="davet" placeholder="DAVET KODU">
         <input type="hidden" name="_subject" value="KAYIT">
-        <input type="hidden" name="_after" value="https://abor-TUS.tumblr.com/?action=signup">
+        <input type="hidden" name="_after" value="#action=signup">
         <input type="hidden" name="_honeypot" value="">
         <input type="hidden" name="_confirmation" value="KAYDINIZ TAMAMLANMAK UZERE">
         <br><input type="submit" value="KAYDOL"><input type="reset" value="SIFIRLA"></form>
