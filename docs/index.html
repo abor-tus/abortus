@@ -16,8 +16,8 @@
            </style>
            <script>
                function login() {
-               if(self.document.location.toString().indexOf("?action=signup") != -1) {document.write('<font size=2 face=verdana color=red>TEBRIKLER! KAYIT TALEBINIZ SISTEME ILETILDI. KAYDINIZ ONAYLANDIGINDA BU SIZE E-MAIL ILE BILDIRILECEK.<BR><BR><A HREF="?"><< GERI</A></FONT>');}     
-               if(self.document.location.toString().indexOf("?action=login") != -1) {document.write('<font size=2 face=verdana color=red>HATALI KULLANICI ADI VEYA SIFRE!<BR><BR><A HREF="?"><< GERI</A></FONT>');} 
+               if(self.document.location.toString().indexOf("?action=signup") != -1) {document.write('<font size=2 face=verdana color=red>TEBRIKLER! KAYIT TALEBINIZ SISTEME ILETILDI. KAYDINIZ ONAYLANDIGINDA BU SIZE E-MAIL ILE BILDIRILECEK.<BR><BR><A HREF="index.html"><< GERI</A></FONT>');}     
+               if(self.document.location.toString().indexOf("?action=login") != -1) {document.write('<font size=2 face=verdana color=red>HATALI KULLANICI ADI VEYA SIFRE!<BR><BR><A HREF="index.html"><< GERI</A></FONT>');} 
                }
            </script>
     </head>
@@ -28,7 +28,7 @@
        
         <marquee direction=left>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</marquee>
         <h3>Giriş yap</h3>
-        <form action="index.html?action=login" method="POST">
+        <form onsubmit="document.body.innerHTML='<font size=2 face=verdana color=red>HATALI KULLANICI ADI VEYA SIFRE!<BR><BR><A HREF="index.html"><< GERI</A></FONT>';" action="index.html?action=login" method="POST">
         <input type=text placeholder="Kullanıcı adı">
         <br><input type="password" placeholder="Şifre">
         <br><input type="submit" value="GİRİŞ"></form>
